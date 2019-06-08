@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+table.table {
+  tr {
+    cursor: pointer;
+    &:hover {
+      background-color: #ccc !important;
+    }
+
+    &:nth-child(odd) {
+      background-color: #eee;
+    }
+  }
+
+  th, td {
+    width: 50%;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-6">
+
+            <app-table [elements]="items" (addElementEvent)="onShowForm()" (selectedElement)="onSelectElement($event)" #table></app-table>
+
+        </div>
+
+        <div class="col-xs-12 col-md-12 col-lg-6">
+
+            <app-form #form *ngIf="showForm" (save)="onFormSave($event)" [editElement]="editElement" [editIndex]="editIndex"></app-form>
+
+            <app-details #details *ngIf="showDetails"
+                         [element]="selectedElement"
+                         (addElementEvent)="showDetails=!$event"
+                         (editElement)="onDetailEdit($event)"
+                         (deleteElement)="onDetailDelete($event)"></app-details>
+
+        </div>
+    </div>
+</div>

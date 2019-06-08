@@ -1,0 +1,17 @@
+<div class="card border-dark mt-5">
+    <h5 class="card-header">{{ title }}</h5>
+    <div class="card-body">
+        <h4>Title:</h4>
+        <p><!-- TODO: -->{{ element.title }}</p>
+        <hr>
+        <h4>Description:</h4>
+        <p><!-- TODO: -->{{ element.description }}</p>
+    </div>
+
+    <div class="card-footer text-muted">
+        <div class="btn-group btn-block">
+            <button class="btn btn-info" (click)="onEdit(element)">Edit</button>
+            <button class="btn btn-secondary" (click)="onDelete(element)">Delete</button>
+        </div>
+    </div>
+</div>
